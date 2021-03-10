@@ -7,6 +7,7 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
@@ -16,6 +17,7 @@ body {
   margin: 0;
   font-size: 1.5rem;
 }
+
 
 h1,
 h2 {
@@ -32,5 +34,195 @@ button {
 
 /* ... Your turn! ... */
 
+/*--------------------GENERAL---------------------*/
+
+ul, header, form, label, footer {
+  display: flex;
+  justify-content: center;
+}
+
+header, label {
+  flex-direction: column;
+  align-items: center;
+}
+.wrap {
+  text-align: center;
+}
+h2 {
+  font-size: 6rem;
+}
+
+/*----------------------nav----------------------*/
+nav {
+  background-color: rgba(128, 178, 56, 0.75);
+  padding: 0.5rem 0;
+  position: fixed;
+  width: 100%;
+}
+ul {
+  list-style-type: none;
+  justify-content: space-around;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+li {
+  transition: 0.5s;
+}
+li:hover:nth-child(odd) {
+  transform: rotate(15deg);
+}
+li:hover:nth-child(even) {
+  transform: rotate(-15deg);
+}
+/*---------------------header--------------------------*/
+header {
+  box-sizing: border-box;
+  min-height: 100vh;
+  background-size: cover;
+  background-image: url("/img/blue-splash.png");
+  background-attachment: fixed;
+  background-position: center;
+}
+header h1 {
+  color: var(--orange);
+  text-shadow: 3px 3px #fff;
+  font-size: 8rem;
+}
+header p {
+  color:var(--orange);
+  text-shadow: 2px 2px #fff;
+  font-size: 2rem;
+}
+/*--------------------section obstacles---------------------*/
+#obstacles {
+  background-color: var(--orange);
+  padding-bottom: 4rem;
+  border-bottom:10px solid  #ee5c2ffa;
+}
+
+#obstacles h2 {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  border-top: 10px solid #ee5c2ffa;
+  text-shadow: 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+#obstacles article {
+  background-color: var(--green);
+  margin: 2rem;
+  border-radius: 1rem;
+  transition: 0.5s;
+}
+#obstacles article:hover {
+  background-color: #eef13f;
+}
+/*--------------------section prizes---------------------*/
+#prizes {
+  background-color: var(--green);
+  padding-bottom: 4rem;
+  border-bottom:10px solid hsl(85, 49%, 42%);
+}
+
+#prizes h2 {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  border-top: 10px solid hsl(85, 49%, 42%);
+  text-shadow: 6px  6px rgba(0, 0, 0, 0.25);
+}
+
+#prizes article {
+  border: 3px dotted #eef13f;
+  margin: 2rem;
+  padding: 3rem 3rem;
+}
+#prizes img {
+  transition: 0.5s;
+}
+#prizes img:hover {
+  transform: rotate(200deg);
+}
+/*--------------------section apply---------------------*/
+#apply {
+   background-color: var(--blue);
+   padding-bottom: 4rem;
+   border-bottom:10px solid #74aec2;
+}
+
+#apply h2 {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  border-top: 10px solid #74aec2;
+  text-shadow: 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+form {
+  flex-direction: column;
+}
+label {
+  align-items: flex-start;
+  margin: 1rem auto 0.25rem auto;
+  font-size: 2rem;
+}
+
+input {
+  background-color: var(--orange);
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 3rem;
+  color: var(--white);
+  border: none;
+}
+
+input::placeholder {
+  color: var(--white);
+  font-size: 1.5rem;
+
+}
+
+button {
+  align-items: flex-start;
+  background-color: var(--yellow);
+  color: black;
+  text-shadow: 4px 4px rgba(0, 0, 0, 0.25);;
+  margin: 2rem auto 2rem 98px;
+  padding: 1.25rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 3rem; 
+  width: 20rem;
+  transition: 0.5s;
+}
+button:hover {
+  background-color: rgb(106, 219, 106);
+}
+/*--------------------section footer---------------------*/
+footer {
+  color: black;
+  background-color: var(--yellow);
+  border-top: 10px solid #d4d639;
+  margin: auto;
+  padding: 20px 0;
+}
 @media (min-width: 640px) {
+  .grid{
+    display: flex;
+    justify-content: center;
+  }
+  #obstacles article {
+    padding: 1rem 3rem;
+  }
+  #keyboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #heatzone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
