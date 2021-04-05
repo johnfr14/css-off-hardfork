@@ -3,6 +3,7 @@
   --orange: #fe6638;
   --green: #80b238;
   --blue: #80c1d6;
+  scroll-behavior: smooth;
 }
 
 * {
