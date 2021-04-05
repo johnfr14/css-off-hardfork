@@ -1,199 +1,212 @@
 :root {
-    --yellow: #eef13f;
-    --orange: #fe6638;
-    --green: #80b238;
-    --blue: #80c1d6;
+  --yellow: #eef13f;
+  --orange: #fe6638;
+  --green: #80b238;
+  --blue: #80c1d6;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background: var(--blue);
-    color: #fff;
-    font-family: Atma, sans-serif;
-    margin: 0;
-    font-size: 1.5rem;
+  background: var(--blue);
+  color: #fff;
+  font-family: Atma, sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 h1,
 h2 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 h1,
 h2,
-h1 + p,
+h1+p,
 button {
-    font-family: Bangers, sans-serif;
-    letter-spacing: 2px;
+  font-family: Bangers, sans-serif;
+  letter-spacing: 2px;
 }
 
 /* ... Your turn! ... */
 
-body {
-    background: top no-repeat url("../img/blue-splash.png") var(--blue);
-}
+@media (min-width: 640px) {}
 
 nav {
-    margin: 0;
-    background-color: var(--green);
-    opacity: 0.8;
-    padding: 0.1rem;
+  position: fixed;
+  width: 100%;
 }
 
-nav > ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  background: var(--green);
+  padding: 1rem;
+  /* Transparence */
 }
 
-nav > ul > li {
-    text-transform: uppercase;
+a {
+  text-decoration: none;
+  color: white;
 }
 
-nav > ul > li > a {
-    color: white;
-    text-decoration: none;
+main,
+header,
+#obstacles,
+#prizes,
+#apply,
+.wrap,
+.grid,
+.prizes-group,
+form,
+article,
+label,
+input {
+  display: flex;
 }
 
-h1 {
-    font-size: 6rem;
+main,
+header,
+#obstacles,
+#prizes,
+#apply,
+.wrap,
+.obstacles-group>article,
+.prizes-group>article,
+form,
+label {
+  flex-direction: column;
 }
+
+.obstacles-group>article,
+.prizes-group>article,
+header {
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ----------------Specification---------------------- */
+
+
 
 header {
-    text-shadow: 1px 1px 0 white;
-    text-align: center;
-    color: var(--orange);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-}
-
-header > p {
-    font-size: 1.5rem;
-}
-
-h2 {
-    text-align: center;
-    text-shadow: 2px 2px 0 #444;
-    //#cb532e;
-    //#67902e;
-}
-
-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
-
-
-article{
-    background-color:var(--green);
-    color:white;
-    text-align:center;
-}
-
-article a{
-    color:white;
-    text-decoration:none;
-}
-
-.obstacles{    
-    background-color: var(--orange);
-}
-.obstacles-group article{
-    border-radius:10px;
-}
-.prizes{
-    background-color: var(--green);
-}
-.prizes-group article{
-    border: 1px dashed var(--yellow);
-}
-
-
-/* .prizes-group .grid { */
-/*     align-items: stretch; */
-/* } */
-.grid { 
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: stretch;
-    justify-content: center;
-}
-
-.grid > article {
-    border: 1px solid yellow;
-    /* flex: auto; */
-}
-
-article {
-    border: 1px solid blue;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('/img/blue-splash.png');
+  background-attachment: fixed;
+  background-size: contain, cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 3rem;
+  color: var(--orange);
 }
 
 .wrap {
-    border: 1px dotted yellow;
-    padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
 }
+
+
 .grid {
-    border: 1px dashed red;
+  justify-content: space-around;
+  min-width: 100%;
+}
+
+section {
+  padding: 5rem;
 }
 
 
-/* .obstacles-group > article , .prizes-group > article { */
-/*     display: flex; */
-/*     flex-direction: column; */
-/*     justify-content: center; */
-/*     align-items: stretch; */
-/* } */
+#obstacles,
+#prizes,
+#apply,
+.wrap,
+.grid {
+  text-align: center;
+}
 
-label,input {
-    display: flex;
-    flex-direction: column;
+
+
+/* ---------------------Sections---------------------------- */
+
+
+#prizes,
+.obstacles-group article {
+  background: var(--green);
+}
+
+/* Sections Specifics */
+
+
+.obstacles-group>article {
+  margin: 0.7rem;
+  padding: 3rem;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+}
+
+/* Colors*/
+
+#obstacles {
+  background: var(--orange);
+}
+
+
+
+.prizes-group>article {
+  border: dashed yellow 2px;
+  padding: 3rem;
+  margin: 0.7rem;
+}
+
+
+
+
+/* footer */
+
+form {
+  margin-bottom: 1rem;
+  align-items: flex-start;
+  width: 500px;
+  padding: 10px;
+}
+
+label,
+input {
+  display: flex;
 }
 
 input {
-    background-color: var(--orange);
-    color: white;
-    border-radius: 6px;
-    border: 0;
-    padding: 0.75rem;
+  background-color: var(--orange);
+  color: white;
+  border-radius: 6px;
+  border: 0;
+  padding: 0.75rem;
+  width: 200%;
 }
 
 button {
-    background-color: var(--yellow);
-    border-radius: 6px;
-    border: 0;
-    padding: 1rem 0.75rem;
-    margin-top: 0.75rem;
-    text-shadow: 2px 2px 0 #aaa;
+  background-color: var(--yellow);
+  border-radius: 6px;
+  border: 0;
+  padding: 1rem 0.75rem;
+  margin-top: 0.75rem;
+  text-shadow: 2px 2px 0 #aaa;
+  font-size: 1.5rem;
 }
 
 footer {
-    margin: auto;
-    padding: 2rem;
-    text-align: center;
-    background-color: var(--yellow);
-    color: black;
-}
-
-@media (min-width: 640px) {
-    .grid {
-	display:flex;
-	flex-direction:row;
-	gap: 1rem;
-	align-items: center;
-    }
-
-    header > p {
-	font-size: 3rem;
-    }
-
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--yellow);
+  color: black;
 }
